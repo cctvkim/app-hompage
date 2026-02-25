@@ -3,7 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>앱 문의 · 출처 · 개인정보처리방침</title>
+  <title>문의하기 · 출처 · 정책</title>
+  <meta name="description" content="오늘의 대통령 앱 문의(이메일/전화), 정부기관 비제휴 면책, 공식 출처, 개인정보처리방침" />
   <style>
     body { font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; margin: 0; background:#f6f7f9; color:#111; }
     .wrap { max-width: 860px; margin: 0 auto; padding: 28px 16px; }
@@ -17,56 +18,66 @@
     ul { margin-left: 18px; }
     footer { margin-top: 16px; font-size: 12px; color:#666; }
     .muted { color:#666; font-size: 12px; }
-    code { background:#f2f3f5; padding: 2px 6px; border-radius: 8px; }
+    .topbar { display:flex; gap:10px; flex-wrap:wrap; margin-top: 8px; }
+    .pill { display:inline-block; padding:8px 10px; border-radius:999px; background:#eef2ff; border:1px solid #dde3ff; font-size:13px; }
+    .pill a { color:#1a2a8a; }
   </style>
 </head>
-  
+
 <body>
 <div class="wrap">
 
-  <div class="card">
-    <h1>앱 문의 및 정책 안내</h1>
-    <p>Google Play 정책 준수를 위해 연락처, 면책, 데이터 출처 및 개인정보처리방침을 안내합니다.</p>
-    <p class="muted">이 페이지 URL은 Play Console의 “연락처 세부정보” 및 “뉴스 및 잡지 앱 선언(연락처 URL)”에 동일하게 입력하세요.</p>
+  
+  <div class="card" id="contact">
+    <h1>문의하기 (Contact)</h1>
+    <p style="margin: 6px 0 0;">
+      <strong>이메일:</strong> <a href="mailto:cctvkimm1@email.com">cctvkimm1@email.com</a><br/>
+      <strong>전화번호:</strong> <a href="tel:+821094810141">010-9481-0141</a>
+    </p>
+    <p class="muted" style="margin-top:10px;">
+      소셜 미디어 계정은 연락처로 간주되지 않으므로 이메일/전화번호 형태로 제공합니다.
+    </p>
+
+    <!-- 빠른 이동 -->
+    <div class="topbar">
+      <span class="pill"><a href="#disclaimer">면책 조항</a></span>
+      <span class="pill"><a href="#sources">공식 출처</a></span>
+      <span class="pill"><a href="#privacy">개인정보처리방침</a></span>
+    </div>
+
+    <p class="muted" style="margin-top:12px;">
+      이 페이지 URL을 Play Console의 “스토어 등록정보 연락처 세부정보(웹사이트)” 및 “뉴스 및 잡지 앱 선언(연락처 URL)”에 동일하게 입력하세요.
+    </p>
   </div>
 
+  <!-- ✅ 2) 앱 정보 -->
   <div class="card">
     <h2>앱 정보</h2>
     <p><strong>앱 이름:</strong> 오늘의 대통령</p>
     <p><strong>개발자:</strong> 김 동완</p>
-    <p><strong>문의 이메일:</strong> <a href="mailto:cctvkimm1@email.com">cctvkimm1@email.com</a></p>
   </div>
 
-  <!-- ✅ (추가) 문의하기 섹션을 따로 분리: 뉴스 정책에서 “명확한 라벨(문의하기)” 요구 -->
-  <div class="card">
-    <h2>문의하기</h2>
-    <p><strong>이메일:</strong> <a href="mailto:cctvkimm1@email.com">cctvkimm1@email.com</a></p>
-    <!-- 전화번호가 있으면 아래 주석 해제 후 입력(권장) -->
-    <p><strong>전화번호:</strong> 010-9481-0141</p>
-    <p class="muted">소셜 미디어 계정은 연락처로 간주되지 않으므로 이메일/전화번호 형태로 제공합니다.</p>
-  </div>
-
-  <!-- ✅ (수정) 면책 조항을 더 강하게/명확하게 -->
-  <div class="card">
+  <!-- ✅ 3) 면책(정부 비제휴/비공식) -->
+  <div class="card" id="disclaimer">
     <h2>정부 기관과의 관계 (면책 조항)</h2>
     <p>
-      본 앱은 대한민국 정부, 대통령실(또는 청와대), 정부 산하기관을 대표하거나 정부와 제휴/승인을 받은 앱이 아닙니다. (비공식 앱)
+      본 앱은 대한민국 정부, 대통령실(또는 청와대), 정부 산하기관을 대표하거나 정부와 제휴/승인을 받은 앱이 아닙니다. (비공식 앱)<br/>
       앱에서 제공되는 콘텐츠는 각 공식 웹사이트 및 공개 API에 공개된 자료를 수집·정리하여 제공하며,
       각 항목은 원문(출처) 페이지로 이동할 수 있는 링크를 함께 제공합니다.
     </p>
   </div>
 
-  <!-- ✅ (추가) 애그리게이터(수집형) 명시 -->
+  <!-- ✅ 4) 애그리게이터 명시 -->
   <div class="card">
     <h2>뉴스/콘텐츠 제공 방식</h2>
     <p>
-      본 앱은 자체 취재/기사 작성(언론사 기능)을 하지 않습니다.
+      본 앱은 자체 취재/기사 작성(언론사 기능)을 하지 않습니다.<br/>
       공개된 공식 웹사이트 및 공개 API의 콘텐츠를 수집·정리하여 보여주는 애그리게이터(수집형) 앱입니다.
     </p>
   </div>
 
-  <!-- ✅ (수정) 출처를 더 구체적으로 (korea.kr + ktv.go.kr + data.go.kr + YouTube) -->
-  <div class="card">
+  <!-- ✅ 5) 공식 출처(정부/공공데이터 링크) -->
+  <div class="card" id="sources">
     <h2>콘텐츠/데이터 공식 출처</h2>
     <ul>
       <li>정책브리핑(korea.kr): <a href="https://www.korea.kr/" target="_blank" rel="noopener">https://www.korea.kr/</a></li>
@@ -79,7 +90,8 @@
     </p>
   </div>
 
-  <div class="card">
+  <!-- ✅ 6) 개인정보처리방침 -->
+  <div class="card" id="privacy">
     <h2>개인정보처리방침</h2>
 
     <h3>1. 수집하는 정보</h3>
@@ -115,18 +127,17 @@
     <h3>5. 이용자의 권리</h3>
     <p>
       사용자는 앱 삭제를 통해 로컬 데이터를 제거할 수 있습니다.
-      게시글 삭제 요청은 이메일로 문의할 수 있습니다.
+      게시글 삭제 요청은 이메일 또는 전화로 문의할 수 있습니다.
     </p>
 
     <p><strong>문의 이메일:</strong> <a href="mailto:cctvkimm1@email.com">cctvkimm1@email.com</a></p>
+    <p><strong>전화번호:</strong> <a href="tel:+821094810141">010-9481-0141</a></p>
     <p><strong>시행일:</strong> 2026년 2월 18일</p>
   </div>
 
   <footer>
     Last updated:
-    <script>
-      document.write(new Date().toISOString().slice(0,10));
-    </script>
+    <script>document.write(new Date().toISOString().slice(0,10));</script>
   </footer>
 
 </div>
